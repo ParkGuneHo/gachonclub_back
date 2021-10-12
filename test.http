@@ -1,0 +1,83 @@
+###
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/club/getAll
+Accept: application/json
+
+###
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
+Content-Type: application/json
+
+{
+  "head": "과동아리",
+  "info": "NOJ - 알고리즘 동아리",
+  "name": "Namgyu Online Judge",
+  "logo": "NOJ.png",
+  "data": "헤헤헿"
+}
+
+###
+
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/get/1
+Accept: application/json
+###
+
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/get/1
+Accept: application/json
+
+###
+
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/add
+Content-Type: application/json
+
+{
+  "userId": "test1",
+  "userPw": "1234",
+  "name" : "노민주",
+  "major" : "?????????",
+  "club" : "고운소리",
+  "position": "동아리 회장"
+}
+###
+
+PUT http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/edit
+Content-Type: application/json
+
+{
+  "userId": "jmg6017",
+  "userPw": "1234",
+  "name" : "정민규",
+  "major" : "학교 안다님",
+  "club" : "Namgyu Online Judge",
+  "position": "막내"
+}
+###
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/add
+Content-Type: application/json
+
+{
+  "club": "Namgyu Online Judge",
+  "title": "동아리원 변화표",
+  "content": "박건호 다이아 -> 다이아\n주윤상 브론즈 -> 첼린저\n변건오 브론즈 -> 골드\n윤준호 Perfect\n정남규 다이아 -> 브론즈",
+  "name": "정남규",
+  "calendar": "20200607"
+}
+###
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/UBF
+Content-Type: application/json
+
+{
+  "_id" : 1,
+  "title": "동구밖",
+  "content": "❤가천대 중앙 기독교 동아리 UBF❤\n안녕하세요!\n가천대 중앙 기독교 동아리 UBF입니다.\n\nUBF(University Bible Fellowship, 대학생 성경읽기 선교회)는\n일대일 성경공부를 통해 예수님의 말씀을 배우고 그 말씀대로 살아가는 건강한 기독교 동아리입니다.\n\n🐑주요 활동\n가천대 기독학생 연합 예배\n일대일 성경공부\n정기 및 야외 모임\n가천 UBF 여름 및 겨울 수련회\nUBF 전국 학생 수련회\n\n🐑모집 기간\n상시 모집\n\n🐑모집 대상\n가천대학교 글로벌캠퍼스 신입생 및 재학생\n\n🐑동아리방 위치\n학생회관 220호\n\n🐑지원 방법\nhttp://naver.me/xxXMBrGh\n지원서 작성 후 제출\n\n🐑연락처\n회장 박은혜 010 7536 1502\n대표간사 최은혜 010 6233 3508\n\n🚫가천대 UBF는 신천지 등 이단의 출입을 금합니다.\n",
+  "name": "박건호"
+}
+###/
+Content-Type: application/json
+
+###
